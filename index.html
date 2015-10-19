@@ -1,3 +1,6 @@
+<!-- Kaitlin Lockhart
+     HTML for police shootings website, displaying title, description, cross-tabulation table, and map-->
+
 <!doctype html>
 
 <html>
@@ -22,15 +25,40 @@
    
   </head>
   <body>
-    <!-- You may want to put your title and additional informaiton here -->
+    <!-- You may want to put your title and additional information here -->
+    <h1>Police Shootings</h1>
+    <p>This is a map displaying police shootings in the US in 2015. The data was crowdsourced through
+      <a href="http://regressing.deadspin.com/deadspin-police-shooting-database-update-were-still-go-1627414202">Deadspin</a>.
+       Black points indicate that the victim was hit, while the red points mean that the victim was killed. A
+       summary of a particular incident can be viewed by clicking the circle.</p>
+
+    <table class="table table-bordered">
+      <tr>
+        <td></td>
+        <td class="category">Hit</td>
+        <td class="category">Killed</td>
+      </tr>
+      <tr>
+        <td class="category">Armed</td>
+        <td id="armAndHit"></td>
+        <td id="notAndHit"></td>
+      </tr>
+      <tr>
+        <td class="category">Unarmed</td>
+        <td id="armAndKill"></td>
+        <td id="notAndKill"></td>
+      </tr>
+    </table>
+
     <div class="container">
       <!-- This is the div that your map will go in.  You'll need to reference its id -->
       <div id="container"></div>
     </div>
     <script>
-      
+
+      drawMap();
       // This is where you should execute your drawMap function
-      
+
     </script>
   </body>
 </html>
